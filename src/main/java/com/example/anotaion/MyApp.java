@@ -1,20 +1,16 @@
-package com.example.demo;
+package com.example.anotaion;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-
 @Component
 public class MyApp {
-
     private MyComponent component;
     @Autowired
-    public MyApp(MyComponent component) {
+    public MyApp(MyComponent component){
         this.component = component;
     }
-
-
-    public void run() {
+    public void run(){
         System.out.println(component.getMessage());
     }
-
 }
