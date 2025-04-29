@@ -13,7 +13,8 @@ public class CategoryServices {
     public CategoryRepository categoryRepository;
     public CategoryDTO createCategory(CategoryDTO categoryDTO){
         Category category = CategoryMapper.toCategoryEntity(categoryDTO);
-        categoryRepository.save(category);
+        category = categoryRepository.save(category);
+        return CategoryMapper.toCreateDTO(category);
     }
 
     //get all category
